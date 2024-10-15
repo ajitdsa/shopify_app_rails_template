@@ -1,0 +1,94 @@
+require:
+  - rubocop-capybara
+  - rubocop-factory_bot
+  - rubocop-rails
+  - rubocop-rspec
+  - rubocop-rspec_rails
+
+AllCops:
+  NewCops: enable
+  SuggestExtensions: false
+  Exclude:
+    - 'vendor/**/*'
+    - 'bin/**/*'
+    - 'db/migrate/*'
+    - 'db/schema.rb'
+
+Layout/LineLength:
+  Exclude:
+    - 'config/application.rb'
+
+Layout/SpaceInsideHashLiteralBraces:
+  EnforcedStyle: no_space
+
+Lint/MissingSuper:
+  Exclude:
+    - 'app/components/**/*.rb'
+
+Metrics/AbcSize:
+  Exclude:
+    - 'lib/tasks/**/*'
+
+Metrics/BlockLength:
+  AllowedMethods: ['describe', 'context']
+  Exclude:
+    - config/environments/**/*.rb
+    - config/routes.rb
+
+Metrics/ClassLength:
+  CountAsOne:
+    - heredoc
+  Exclude:
+    - 'app/models/**/*' # Due to the annotate gem
+    - 'tasks/**/*'
+    - 'app/controllers/**/*'
+
+Metrics/MethodLength:
+  CountComments: false
+  Max: 20
+
+Metrics/ParameterLists:
+  Exclude:
+    - 'tasks/**/*'
+    - 'app/components/**/*.rb'
+
+Naming/MethodParameterName:
+  Enabled: false
+
+Naming/PredicateName:
+  Enabled: false
+
+Style/Documentation:
+  Exclude:
+    - 'app/controllers/**/*'
+    - 'config/application.rb'
+    - 'app/services/**/*'
+    - 'app/jobs/**/*'
+
+Style/OpenStructUse:
+  Exclude:
+    - 'spec/factories/**/*.rb'
+
+RSpec/ContextWording:
+  Enabled: false
+
+RSpec/DescribeClass:
+  Enabled: false
+
+RSpec/ExampleLength:
+  Max: 7
+
+RSpec/MultipleMemoizedHelpers:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+RSpec/NestedGroups:
+  Max: 7
+
+RSpec/SortMetadata:
+  Enabled: false
+
+RSpec/VerifiedDoubles:
+  Enabled: false

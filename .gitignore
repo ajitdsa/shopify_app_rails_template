@@ -1,0 +1,12 @@
+**/node_modules
+
+.env
+.env.*
+
+# IDES
+.vscode
+.idea
+
+# Ignore shopify files created during app dev
+.shopify/*
+.shopify.lock
